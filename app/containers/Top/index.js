@@ -1,9 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
-
-// components
+import LinkCard from 'components/LinkCard';
 import LoadAnimation from 'components/LoadAnimation';
+
+const Logo = styled.img`
+  width: 300px;
+`;
+
+const ImageBox = styled.div`
+  padding-top: 100px;
+  text-align: center;
+`;
 
 export const ButtonColumn = styled.div`
   width: 800px;
@@ -11,30 +18,25 @@ export const ButtonColumn = styled.div`
   display: flex;
   position: absolute;
   z-index: 1;
-  top: 300px;
+  top: 270px;
   right: 0;
   left: 0;
-  a {
-    flex: 1;
-    padding: 56px;
-    margin: 16px;
-    border: solid 2px #333;
-    border-radius: 4px;
-    color: #333;
-    background-color: #fff;
-    text-decoration: none;
-    text-align: center;
-    font-size: 20px;
-  }
 `;
+
 
 class Top extends React.PureComponent {
   render() {
+    console.log(this.props);
     return (
-      <ButtonColumn>
-        <Link to="/code" onClick={null}>アポイントメント有りの方</Link>
-        <Link to="/other">アポイントメント無しの方</Link>
-      </ButtonColumn>
+      <div>
+        <ImageBox>
+          <Logo src="https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"/>
+        </ImageBox>
+        <ButtonColumn>
+          <LinkCard link="/code" text={'アポイントメントをお持ちの方'} />
+          <LinkCard link="/other" text={'アポイントメントが無い方'} />
+        </ButtonColumn>
+      </div>
     );
   }
 }

@@ -23,7 +23,7 @@ const AppWrapper = styled.div`
   display: flex;
   min-height: 100%;
   flex-direction: column;
-  background-color: #333;
+  background-color: #ddd;
   height: 100%;
 `;
 
@@ -44,9 +44,9 @@ const params = {
       "type": "circle",
       "stroke": {
         //ボーダー幅
-        "width": 5,
+        "width": 0.5,
         //ボーダー色
-        "color": "#fff"
+        "color": "#333"
       },
     },
     "size": {

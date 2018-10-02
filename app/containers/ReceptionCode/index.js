@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { compose } from "redux";
 import styled from 'styled-components';
-
 import InputTextBox from 'components/FormParts/InputText';
 import {
   Form,
@@ -12,8 +11,6 @@ import {
   Button,
   ButtonToolbar,
 } from 'react-bootstrap';
-// conponents
-
 import { ButtonColumn } from 'containers/Top';
 
 class ReceptionCode extends React.Component {
@@ -32,7 +29,7 @@ class ReceptionCode extends React.Component {
             placeholder="Name"
           />
           {
-            number.map((n, key)=>{
+            number.map((n, key)=> {
               return <div key={key}>{n}</div>
             })
           }
